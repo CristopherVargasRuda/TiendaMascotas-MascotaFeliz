@@ -62,3 +62,8 @@ typings/
 
 # Cache used by TypeScript's incremental build
 *.tsbuildinfo
+
+#datasourse cadena de conexion base de datos
+/src/datasources/mongodb.datasources.ts
+/src/config
+
