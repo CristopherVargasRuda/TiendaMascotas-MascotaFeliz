@@ -83,7 +83,7 @@ export class UsuarioController {
     //Notificar al usuario
     let destino = usuario.correo;
     let asunto = 'Estamos felices que estes en mascota feliz';
-    let contenido = `Hola ${usuario.nombre}, tu usuario es ${usuario.correo} y tu contraseña es ${usuario.contrasena}`;
+    let contenido = `Hola ${usuario.nombre}, tu usuario es ${usuario.correo} y tu contraseña es ${clave}`;
     fetch(`http://127.0.0.1:5000/email?correo_destino=${destino}&asunto=${asunto}&contenido=${contenido}`)
     .then((data:any)=>{
       console.log(data);

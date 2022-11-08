@@ -27,7 +27,7 @@ export class AutenticacionService {
     let claveCrifada = cryptoJS.MD5(clave).toString();
     return claveCrifada;
   }
-
+  
   IdentificarUsuario(usuario: string, clave:string){
     try {
       let p =this.usuarioRepository.findOne(
