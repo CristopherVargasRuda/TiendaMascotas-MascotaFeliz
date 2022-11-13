@@ -3,13 +3,13 @@
     'use strict'
   
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
+    const forms = document.querySelectorAll('.needs-validation');
   
     // Loop over them and prevent submission
     Array.from(forms).forEach(form => {
       form.addEventListener('submit', event => {
         if (!form.checkValidity()) {
-          event.preventDefault()
+          event.preventDefault();
           event.stopPropagation()
         }else{
             RegistrarPersona();
@@ -27,16 +27,21 @@ function RegistrarPersona(){
     let apellidos = document.querySelector("#txtApellidos").value;
     let correo = document.querySelector("#txtCorreo").value;
     let celular = document.querySelector("#txtCelular").value;
-
+    const rol ="cliente";
+    const cedula ="464464";
+;
 
     let url = `http://localhost:3000/personas`;
     let datos = {
+        cedula: cedula,
         nombres: nombres,
         apellidos: apellidos,
         correo: correo,
-        celular: celular
+        celular: celular,
+        rol:rol
 
     };
+    alert(JSON.stringify(datos));
 
     fetch(url,{
         method: 'POST',
