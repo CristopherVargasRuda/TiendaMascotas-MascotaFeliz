@@ -1,0 +1,58 @@
+<section class="col-md-6 p-md-5">
+
+  <h1 class="bg-light text-center p-3">Registro nuevo cliente</h1>
+  <form class="needs-validation" novalidate>
+    <div class="row">
+      <label for="txtNombre" class="form-label col-md-3 text-end">Nombres</label>
+      <div class="col-md-9">
+        <input type="text" class="form-control" id="txtNombre" required>
+      </div>
+      <p class="invalid-feedback">
+        Este campo es requerido.
+      </p>
+    </div>
+
+
+    <div class="row mt-2">
+      <label for="txtApellidos" class="form-label col-md-3 text-end">Apellidos</label>
+      <div class="col-md-9">
+        <input type="text" class="form-control" id="txtApellidos" required>
+      </div>
+      <p class="invalid-feedback">
+        Los apellidos son obligatorios.
+      </p>
+    </div>
+
+    <div class="row mt-2">
+      <label for="txtDocumento" class="form-label col-md-3 text-end">Identificacion</label>
+      <div class="col-md-9">
+      <input type="text" id="txtDocumento"  class="form-control" required>
+    </div>
+  </div>
+
+    <h3 class="title text-center mt-3 p-1 text-info bg-light">datos de contacto</h3>
+
+
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend">Email <i class="bi bi-envelope-at-fill px-1"></i></span>
+        <input type="email" class="form-control" id="txtCorreo" aria-describedby="inputGroupPrepend" required>
+        <p class="invalid-feedback">
+         Por favor ingrese un correo electronico.
+        </p>
+      </div>
+
+
+
+    <div class="input-group has-validation mt-2">
+      <span class="input-group-text" id="inputGroupPrepend">Telefono <i></i></span>
+      <input type="text" class="form-control" id="txtCelular" required>
+      <p class="invalid-feedback">
+        Ingrese un numero de celular.
+      </p>
+    </div>
+
+      <div class="flex-reverse mt-2">
+        <button class="btn btn-outline-warning" type="submit">Registrarse</button>
+      </div>
+  </form>
+</section>
