@@ -5,7 +5,7 @@ import { AgregarMascotaComponent } from './agregar-mascota/agregar-mascota.compo
 const routes: Routes = [
 
 {
-  path: "nueva-mascota",
+  path: "cliente/nueva-mascota",
   component:AgregarMascotaComponent
 }
 

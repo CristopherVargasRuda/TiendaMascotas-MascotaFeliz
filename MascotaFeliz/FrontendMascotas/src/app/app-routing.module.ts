@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren:()=> import("./modulos/inicio/inicio.module").then(x=>x.InicioModule)
   },
   {
+    path:"cliente",
+    loadChildren:()=>import("./modulos/cliente/cliente.module").then(x=>x.ClienteModule)
+  },
+  {
     path:"**",
     component:ErrorComponent
   }
