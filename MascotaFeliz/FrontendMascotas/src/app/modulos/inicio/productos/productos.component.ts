@@ -7,18 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductosComponent implements OnInit {
 
-  constructor() {
+   productos:Array<any>=new Array();
 
+  nombrre:string="Carlos";
+  constructor() {
+    fetch("http://localhost:3000/productos-servicios",{
+      method: 'get'
+  }).then(res => res.json())
+  .then(mensaje =>{
+    this.productos=mensaje;
+   
+  })
 
    }
 
   ngOnInit(): void {
-    fetch("http://localhost:3000/usuarios",{
-      method: 'get'
-  }).then(res => res.json())
-  .then(mensaje =>{
-    console.log(mensaje)
-  })
+    console.log(this.productos.length)
   }
 
 }
