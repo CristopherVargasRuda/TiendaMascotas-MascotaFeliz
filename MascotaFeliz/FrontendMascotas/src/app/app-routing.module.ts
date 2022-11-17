@@ -17,6 +17,10 @@ const routes: Routes = [
     loadChildren:()=>import("./modulos/cliente/cliente.module").then(x=>x.ClienteModule)
   },
   {
+    path:"administrador",
+    loadChildren:()=>import("./modulos/administrador/administrador.module").then(x=>x.AdministradorModule)
+  },
+  {
     path:"**",
     component:ErrorComponent
   }

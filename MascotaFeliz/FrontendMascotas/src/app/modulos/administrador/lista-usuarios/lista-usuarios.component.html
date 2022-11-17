@@ -1,0 +1,27 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Cedula</th>
+        <th>Rol</th>
+        <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of listaUsuarios">
+        <td> {{usuario.nombre}}</td>
+        <td> {{usuario.apellido}}</td>
+        <td> {{usuario.cedula}}</td>
+     
+        <td> {{usuario.rol}}</td>
+     
+        <td >
+            <a href="administrador/editar-usuario?id={{usuario.id}}"><i class="bi bi-pencil-fill mx-1"></i></a>
+            <a href="administrador/eliminar-usuario?id={{usuario.id}}" class="text-danger"><i class="bi bi-person-dash mx-1"></i></a>
+            <a href="administrador/nuevo-usuario={{usuario.id}" class="text-success"><i class="bi bi-search-heart mx-1"></i></a> </td>
+     
+
+    </tr>
+  </tbody>
+</table>

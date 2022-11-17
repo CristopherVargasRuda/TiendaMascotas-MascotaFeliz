@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AdministradorRoutingModule } from './administrador-routing.module';
+import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ListaUsuariosComponent
+  ],
   imports: [
     CommonModule,
     AdministradorRoutingModule
