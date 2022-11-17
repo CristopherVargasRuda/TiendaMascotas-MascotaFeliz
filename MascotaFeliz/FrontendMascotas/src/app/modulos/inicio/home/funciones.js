@@ -54,3 +54,4 @@ function RegistrarPersona(){
         console.log(mensaje)
     })
 }
+  

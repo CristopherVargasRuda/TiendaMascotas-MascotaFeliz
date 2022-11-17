@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaUsuariosComponent implements OnInit {
 
+  
   listaUsuarios:Array<any> = new Array();
 
 
@@ -16,7 +17,7 @@ export class ListaUsuariosComponent implements OnInit {
   }).then(res => res.json())
   .then(mensaje =>{
     this.listaUsuarios=mensaje;
-   
+
   })
 
 

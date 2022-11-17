@@ -8,7 +8,6 @@ const routes: Routes = [
   path: "cliente/nueva-mascota",
   component:AgregarMascotaComponent
 }
-
 ];
 
 @NgModule({
