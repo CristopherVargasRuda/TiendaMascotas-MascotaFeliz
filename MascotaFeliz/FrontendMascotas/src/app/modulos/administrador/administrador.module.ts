@@ -7,6 +7,11 @@ import { ListaMascotasComponent } from './lista-mascotas/lista-mascotas.componen
 import { ListaSucursalesComponent } from './lista-sucursales/lista-sucursales.component';
 import { ListaPlanesComponent } from './lista-planes/lista-planes.component';
 
+import { GridJsAngularModule } from 'gridjs-angular';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -17,7 +22,8 @@ import { ListaPlanesComponent } from './lista-planes/lista-planes.component';
   ],
   imports: [
     CommonModule,
-    AdministradorRoutingModule
-  ]
+    AdministradorRoutingModule,
+    GridJsAngularModule]
+  
 })
 export class AdministradorModule { }

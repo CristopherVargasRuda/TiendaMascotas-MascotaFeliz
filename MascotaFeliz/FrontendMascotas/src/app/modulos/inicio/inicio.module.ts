@@ -9,6 +9,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { LogingComponent } from './loging/loging.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     CommonModule,
-    InicioRoutingModule
+    InicioRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class InicioModule { }

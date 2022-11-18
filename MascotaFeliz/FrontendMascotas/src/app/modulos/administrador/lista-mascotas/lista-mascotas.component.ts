@@ -7,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaMascotasComponent implements OnInit {
 
-  constructor() { }
+  listaMascotas:Array<any> = new Array();
+  constructor() {
+    fetch("http://localhost:3000/mascotas",{
+      method: 'get'
+  }).then(res => res.json())
+  .then(mensaje =>{
+    this.listaMascotas=mensaje;
+  
+  })
+   }
 
   ngOnInit(): void {
   }

@@ -7,34 +7,28 @@
   </section>
   <section class="col-md-5">
     <h1 class="bg-light text-center p-3">Dejanos un mensaje</h1>
-    <form class="needs-validation" novalidate>
+    <form class="needs-validation" [formGroup]="fgValidador" (ngSubmit)="RegistrarMesaje()">
       <div class="row">
         <label for="txtNombre" class="form-label col-md-3 text-md-end">Nombres</label>
         <div class="col-md-9">
-          <input type="text" class="form-control" id="txtNombre" required>
+          <input formControlName="nombre" type="text" class="form-control" id="txtNombre">
         </div>
-        <p class="invalid-feedback">
-          Este campo es requerido.
-        </p>
+
       </div>
-
-
 
       <div class="row mt-2">
         <label for="txtApellidos" class="form-label col-md-3 text-md-end">Apellidos</label>
         <div class="col-md-9">
-          <input type="text" class="form-control" id="txtApellidos" required>
+          <input type="text" class="form-control" formControlName="apellido" id="txtApellidos" required>
         </div>
-        <p class="invalid-feedback">
-          Los apellidos son obligatorios.
-        </p>
+
       </div>
 
-      <div class="row mt-2">
-        <label for="txtComentario" class="form-label col-md-3 text-md-end">Comentario</label>
-        <div class="col-md-9">
-        <input type="text" id="txtComentario"  class="form-control" required>
-      </div>
+      <div class="form-floating mt-2">
+   
+        <input type="textarea" id="txtComentario" formControlName="comentario" class="form-control" >
+        <label for="txtComentario" class="form-label col-md-3 text-black-50">Comentario</label>
+
     </div>
 
       <h3 class="title text-center mt-3 p-1 text-info bg-light">datos de contacto</h3>
@@ -42,24 +36,22 @@
 
         <div class="input-group has-validation">
           <span class="input-group-text" id="inputGroupPrepend">Email <i class="bi bi-envelope-at-fill px-1"></i></span>
-          <input type="email" class="form-control" id="txtCorreo" aria-describedby="inputGroupPrepend" required>
-          <p class="invalid-feedback">
-           Por favor ingrese un correo electronico.
-          </p>
+          <input type="email" class="form-control" formControlName="email" id="txtCorreo" aria-describedby="inputGroupPrepend" required>
+
         </div>
 
 
 
       <div class="input-group has-validation mt-2">
         <span class="input-group-text" id="inputGroupPrepend">Telefono <i></i></span>
-        <input type="text" class="form-control" id="txtCelular" required>
+        <input type="text" formControlName="telefono" class="form-control" id="txtCelular" required>
         <p class="invalid-feedback">
           Ingrese un numero de celular.
         </p>
       </div>
 
         <div class="flex-reverse mt-2">
-          <button class="btn btn-outline-warning" type="submit">Registrarse</button>
+          <input  [disabled]="!fgValidador.valid" class="btn btn-outline-warning" type="submit" value="Enviar">
         </div>
     </form>
   </section>
