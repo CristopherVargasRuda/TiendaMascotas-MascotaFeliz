@@ -6,7 +6,7 @@
         <tr class="bg-success bg-opacity-50">
             <th>Nombre</th>
             <th>Descripcion</th>
-            <th>comentario</th>
+            <th style="max-width:7em">comentario</th>
             <th>Foto</th>
             <th>acciones</th>
         </tr>
@@ -17,7 +17,7 @@
                 <td> <h3>{{mascota.nombre}}</h3></td>
                 <td><p><b>{{mascota.especie}}</b></p> <p>{{mascota.estado}}</p></td>
                 <td>{{mascota.comentario}}</td>
-                <td style="max-width: 3em;"><img src="assets/img/images-mascotas/{{mascota.foto}}" class="img-fluid rounded-circle" alt={{mascota.especie}}>  </td>
+                <td style="max-width: 96px; min-width: 48px;"><img src="assets/img/images-mascotas/{{mascota.foto}}" class="img-fluid rounded-circle" alt={{mascota.especie}}>  </td>
                 <td>
                     <a href="administrador/editar-mascota?id={{mascota.id}}"><i class="bi bi-pencil-fill mx-1"></i></a>
                     <a href="administrador/eliminar-mascota?id={{mascota.id}}" class="text-danger"><i class="bi bi-person-dash mx-1"></i></a>

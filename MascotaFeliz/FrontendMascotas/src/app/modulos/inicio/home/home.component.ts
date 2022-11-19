@@ -24,8 +24,7 @@ export class HomeComponent implements OnInit {
 
   
  RegistrarMesaje(){
-   
-  
+
   let nombre = this.fgValidador.controls['nombre'].value;
   let apellido = this.fgValidador.controls['apellido'].value;
   let correo =this.fgValidador.controls['email'].value;
@@ -55,6 +54,4 @@ export class HomeComponent implements OnInit {
   })
 }
 
-
 }
-
