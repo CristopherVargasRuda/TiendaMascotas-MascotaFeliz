@@ -30,10 +30,19 @@
         <a href="contacto" class="nav-link btn btn-info">Contacto</a>
       </li>
     </ul>
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-      <button class="btn btn-outline-warning" type="submit">Buscar</button>
-    </form>
+    <div class="d-flex">
+    <button class="d-flex btn btn-outline-warning b-2" *ngIf="iniciarSesion=='cerrar sesión'" (click)="cerrarSesion()" role="login">
+          {{iniciarSesion}}
+    </button>
+
+
+  <button class="d-flex btn btn-outline-warning b-2" *ngIf="iniciarSesion=='login'"  routerLink=login  role="login">
+          login
+    </button>
+
+
+
+  </div>
   </div>
 
 </nav>

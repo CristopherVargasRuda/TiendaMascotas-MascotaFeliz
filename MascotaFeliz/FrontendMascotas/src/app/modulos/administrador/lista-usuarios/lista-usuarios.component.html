@@ -9,12 +9,13 @@
       <div class="modal-body">
         <h4 class="text-center">{{usuarioMostron.nombre}} {{usuarioMostron.apellido}}</h4>
         <h5 class="bg-warning bg-opacity-50 p-2">ID: {{usuarioMostron.cedula}}</h5>
-        <h5 class="bg-success bg-opacity-50 p-2"><i class="bi bi-envelope-at-fill mx-1"></i> {{usuarioMostron.correo}}</h5>
+        <h5 class="bg-success bg-opacity-50 p-2"><i class="bi bi-envelope-at-fill mx-1"></i> {{usuarioMostron.correo}}
+        </h5>
         <h5 class="bg-info bg-opacity-50 p-2"><i class="bi bi-telephone-fill mx-1"></i> {{usuarioMostron.telefono}}</h5>
       </div>
       <div class="modal-footer justify-content-center">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -22,27 +23,26 @@
 <table class="table table-striped">
   <thead>
     <tr>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Cedula</th>
-        <th>Rol</th>
-        <th>Acciones</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Cedula</th>
+      <th>Rol</th>
+      <th>Acciones</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let usuario of listaUsuarios">
-        <td> {{usuario.nombre}}</td>
-        <td> {{usuario.apellido}}</td>
-        <td> {{usuario.cedula}}</td>
-     
-        <td> {{usuario.rol}}</td>
-     
-        <td >
-            <button (click)="mostrarUsuario(usuario.id)" data-bs-toggle="modal" data-bs-target="#usuarioModal" class="text-success mx-1">
-              <i class="bi bi-search-heart mx-1"></i></button>
-            <button (click)="eliminarUsuario(usuario.id)" class="text-danger mx-1">
-              <i class="bi bi-person-dash mx-1"></i></button>
-          </td>
+      <td> {{usuario.nombre}}</td>
+      <td> {{usuario.apellido}}</td>
+      <td> {{usuario.cedula}}</td>
+      <td> {{usuario.rol}}</td>
+      <td>
+        <button (click)="mostrarUsuario(usuario.id)" data-bs-toggle="modal" data-bs-target="#usuarioModal"
+          class="text-success mx-1">
+          <i class="bi bi-search-heart mx-1"></i></button>
+        <button (click)="eliminarUsuario(usuario.id)" class="text-danger mx-1">
+          <i class="bi bi-person-dash mx-1"></i></button>
+      </td>
     </tr>
   </tbody>
 </table>

@@ -2,28 +2,24 @@
 <div class="col-md-5">
   <h1 class="text-center"> Ingrese con sus datos</h1>
 
-  <form  class="needs-validation p-2" novalidate>
+  <form [formGroup]="fgSesion" (ngSubmit)="iniciarSesion()" class="needs-validation p-2" >
 
     <div class="row mt-2 p-3">
-      <label for="txtNombre" class="form-label col-md-3 text-md-end">usuario</label>
+      <label  for="txtNombre" class="form-label col-md-3 text-md-end">Usuario</label>
       <div class="col-md-9">
-        <input type="text" class="form-control" id="txtUsuario" required>
+        <input formControlName="usuario" type="text" class="form-control" id="txtUsuario">
       </div>
-      <p class="invalid-feedback">
-        Este campo es requerido.
-      </p>
+
     </div>
     <div class="row mt-2 p-3">
-      <label for="txtNombre" class="form-label col-md-3 text-md-end">usuario</label>
+      <label for="txtNombre" class="form-label col-md-3 text-md-end">Contraseña</label>
       <div class="col-md-9">
-        <input type="password" class="form-control" id="txtcontraseña" required>
+        <input formControlName="contrasena" type="password" class="form-control" id="txtcontraseña">
       </div>
-      <p class="invalid-feedback">
-        Este campo es requerido.
-      </p>
+
     </div>
     <div class="d-flex flex-row-reverse mt-2 p-2">
-      <input type="submit" class="btn btn-outline-warning" value="enviar">
+      <input type="submit" [disabled]="!fgSesion.valid || intentos>5" class="btn btn-outline-warning" value="enviar">
     </div>
   </form>
 </div>

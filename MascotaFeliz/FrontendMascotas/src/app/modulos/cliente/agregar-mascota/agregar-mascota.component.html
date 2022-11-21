@@ -1,33 +1,43 @@
-<section class="row justify-content-center">
-<form class="col-md-5">
-<div class="row">
-  <label for="txtNombre" class="col-3">Nombre</label>
-  <div class="col-9">
-    <input type="text" id="txtNombre">
-  </div>
-</div>
-
-
-
-<div class="row">
-  <label for="txtEstado" class="col-3">Estado</label>
-  <div class="col-9">
-    <input type="text" id="txtEstado">
-  </div>
-
-</div>
-<div class="row">
-  <label for="txtEspecie" class="col-3">Especie</label>
-  <div class="col-9">
-    <input type="text" id="txtEspecie">
-  </div>
-</div>
-<div >
-<label for="Comentario">Ccomentario</label>
-<input type="textarea" id="cometario">
-</div>
-
-</form>
-
+<section class="row justify-content-center mb-5">
+  <h2 class="text-center bg-light mt-3 p-1 p-md-3 p-xxl-5">Agregar una mascota a el perfil de tu familia</h2>
+  <form [formGroup]="fgMascota" (ngSubmit)="registrarMascota()" class="col-md-5">
+    <div class="row mb-2">
+      <label for="txtNombre" class="col-3">Nombre</label>
+      <div class="col-9">
+        <input formControlName="nombre" class="form-control" type="text" id="txtNombre">
+      </div>
+    </div>
+    <div class="row mm-2">
+      <label for="txtEspecie" class="col-3">Especie</label>
+      <div class="col-9">
+        <select formControlName="especie" class="form-control" name="especie" id="especie">
+          <option value="perro">perro</option>
+          <option value="gato">gato</option>
+          <option value="cerdo">cerdo</option>
+          <option value="gallina">gallina</option>
+          <option value="caballo">caballo</option>
+          <option value="Vaca">Vaca</option>
+          <option value="Oveja">Oveja</option>
+          <option value="Cabra">Cabra</option>
+          <option value="Cerdo">Cerdo</option>
+          <option value="Caballo">Caballo</option>
+          <option value="Conejo">Conejo</option>
+          <option value="Hamster">Hamster</option>
+          <option value="Curí">Curí</option>
+          <option value="Ánade">Ánade</option>
+          <option value="Pato">Pato</option>
+          <option value="Gallina">Gallina</option>
+          <option value="Ganso">Ganso</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-floating mt-2">
+       <input type="textarea" formControlName="comentario" class="form-control" id="cometario">
+       <label class="form-label text-black-50" for="comentario">Comentario</label>
+    </div>
+    <div class="d-flex flex-column-reverse">
+      <p class="text-danger">* Al enviar se le asignara automaticamente una cita con el veterinario para valor mascota </p> <input type="submit"
+        class="btn btn-outline-warning m-1 p-2" value="Enviar">
+    </div>
+  </form>
 </section>
-

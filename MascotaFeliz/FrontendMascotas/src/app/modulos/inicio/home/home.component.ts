@@ -13,16 +13,16 @@ export class HomeComponent implements OnInit {
     'comentario':['',[Validators.required]],
     'email':['',[Validators.required,Validators.email]],
     'telefono':['',[Validators.required,Validators.maxLength(11),Validators.minLength(10)]],
-        
+
   })
 
   constructor(private fb:FormBuilder) { }
 
   ngOnInit(): void {
-    
+
   }
 
-  
+
  RegistrarMesaje(){
 
   let nombre = this.fgValidador.controls['nombre'].value;
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
   let correo =this.fgValidador.controls['email'].value;
   let telefono = this.fgValidador.controls['telefono'].value;
   let mensaje = this.fgValidador.controls['comentario'].value;
-   
+
 
   let url = `http://localhost:3000/prospectos`;
   let datos = {

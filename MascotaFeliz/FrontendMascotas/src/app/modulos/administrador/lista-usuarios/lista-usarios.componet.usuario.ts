@@ -7,7 +7,7 @@ export class Usuario {
     contrasena: string;
     rol: string;
 
-  
+
 
     constructor( cedula: string,nombre: string,apellido: string, telefono: string, correo: string, contrasena: string,rol: string){
         this.cedula=cedula;

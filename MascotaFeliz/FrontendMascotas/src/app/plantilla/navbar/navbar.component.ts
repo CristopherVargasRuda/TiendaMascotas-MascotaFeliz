@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  usuario:string = 'invitado';
+  iniciarSesion:string="login";
+
+
+  constructor() {
+    if(localStorage.getItem('rol')){
+      this.iniciarSesion='cerrar sesión';
+    }
+
+   }
 
   ngOnInit(): void {
+  }
+  cerrarSesion(){
+    localStorage.clear();
   }
 
 }

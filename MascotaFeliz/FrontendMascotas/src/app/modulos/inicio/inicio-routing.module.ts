@@ -34,7 +34,7 @@ const routes: Routes = [
     component:RegistrarseComponent
   },
   {
-    path:"loging",
+    path:"login",
     component:LogingComponent
   }
 
