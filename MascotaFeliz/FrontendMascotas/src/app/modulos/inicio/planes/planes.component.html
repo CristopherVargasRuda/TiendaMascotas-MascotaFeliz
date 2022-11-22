@@ -1,0 +1,12 @@
+<section class="row p-md-3 px-xl-5">
+
+<div class="card col-6 col-md-4 col-xxl-3 m-md-2"  *ngFor="let plan of listaPlanes">
+  <div class="card-body bg-dark-blue">
+    <h5 class="card-title">{{plan.nombre}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">${{plan.precio}}</h6>
+    <p class="card-text">{{plan.descripcion}}</p>
+    <a routerLink="cliente/adquir-plan" class="btn btn-dark">Adquir plan</a>
+
+  </div>
+</div>
+ </section>

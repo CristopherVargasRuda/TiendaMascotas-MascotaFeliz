@@ -12,6 +12,8 @@ import { NuevaMascotaComponent } from './lista-mascotas/nueva-mascota/nueva-masc
 import { NuevoUsuarioComponent } from './lista-usuario/nuevo-usuario/nuevo-usuario.component';
 import { ModificarUsuarioComponent } from './lista-usuario/modificar-usuario/modificar-usuario.component';
 import { ModificarMascotaComponent } from './lista-mascotas/modificar-mascota/modificar-mascota.component';
+import { NuevoPlanComponent } from './nuevo-plan/nuevo-plan.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -26,12 +28,16 @@ import { ModificarMascotaComponent } from './lista-mascotas/modificar-mascota/mo
     NuevaMascotaComponent,
     NuevoUsuarioComponent,
     ModificarUsuarioComponent,
-    ModificarMascotaComponent
+    ModificarMascotaComponent,
+    NuevoPlanComponent
   ],
   imports: [
     CommonModule,
     AdministradorRoutingModule,
-    GridJsAngularModule]
-  
+    GridJsAngularModule,
+    FormsModule,
+    ReactiveFormsModule
+  ]
+
 })
 export class AdministradorModule { }

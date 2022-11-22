@@ -10,6 +10,7 @@ import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { LogingComponent } from './loging/loging.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PlanesComponent } from './planes/planes.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ServiciosComponent,
     RegistrarseComponent,
     LogingComponent,
-    HomeComponent
+    HomeComponent,
+    PlanesComponent
   ],
   imports: [
     CommonModule,
