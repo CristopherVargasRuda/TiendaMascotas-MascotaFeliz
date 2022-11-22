@@ -3,10 +3,10 @@
   <h1 class="text-center bg-light p-2 p-md-3 p-xxl-5">Nuevo Plan</h1>
 
 
-  <form [formGroup]="fgPlanes" (ngSubmit)="agregarPlan()" class="col-md-5 justify-content-center">
+  <form [formGroup]="fgPlanes" (ngSubmit)="agregarPlan()" class="col-sm-9 col-md-5 col-lg-4 col-xxl-3  justify-content-center">
 
     <div  class="row">
-      <label class="form-label col-3"for="txtNombre">Nombre</label>
+      <label class="form-label col-3" for="txtNombre">Nombre</label>
       <input class="form-label col-9" (click)="borrarMensaje()"  formControlName="nombre"  type="text" name="txtNombre" id="txtNombre">
     </div>
 
