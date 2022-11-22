@@ -51,6 +51,7 @@ export class RegistrarseComponent implements OnInit {
     .then(mensaje =>{
         console.log(mensaje)
     })
+    this.formularioCliente.reset();
   }
   
 

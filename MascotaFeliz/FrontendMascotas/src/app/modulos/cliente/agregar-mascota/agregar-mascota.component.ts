@@ -48,7 +48,7 @@ export class AgregarMascotaComponent implements OnInit {
       }
     })
 
-
+this.fgMascota.reset();
 
   }
 

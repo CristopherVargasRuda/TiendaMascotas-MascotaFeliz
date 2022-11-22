@@ -53,7 +53,12 @@ iniciarSesion(){
 
   this.intentos ++;
   localStorage.setItem('intentos',this.intentos.toString());
-
+  this.fgSesion.reset();
+  if(localStorage['rol']){
+    if(localStorage['rol'].lowerCase()=='cliente'){
+      window.location.href="/cliente/";
+    }
+  }
 
   }
 

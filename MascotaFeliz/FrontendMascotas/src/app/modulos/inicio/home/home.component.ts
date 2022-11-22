@@ -52,6 +52,9 @@ export class HomeComponent implements OnInit {
   .then(mensaje =>{
       console.log(mensaje)
   })
+
+  this.fgValidador.reset();
+
 }
 
 }

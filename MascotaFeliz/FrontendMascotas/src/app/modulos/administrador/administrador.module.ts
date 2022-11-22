@@ -8,6 +8,10 @@ import { ListaSucursalesComponent } from './lista-sucursales/lista-sucursales.co
 import { ListaPlanesComponent } from './lista-planes/lista-planes.component';
 
 import { GridJsAngularModule } from 'gridjs-angular';
+import { NuevaMascotaComponent } from './lista-mascotas/nueva-mascota/nueva-mascota.component';
+import { NuevoUsuarioComponent } from './lista-usuario/nuevo-usuario/nuevo-usuario.component';
+import { ModificarUsuarioComponent } from './lista-usuario/modificar-usuario/modificar-usuario.component';
+import { ModificarMascotaComponent } from './lista-mascotas/modificar-mascota/modificar-mascota.component';
 
 
 
@@ -18,7 +22,11 @@ import { GridJsAngularModule } from 'gridjs-angular';
     ListaUsuariosComponent,
     ListaMascotasComponent,
     ListaSucursalesComponent,
-    ListaPlanesComponent
+    ListaPlanesComponent,
+    NuevaMascotaComponent,
+    NuevoUsuarioComponent,
+    ModificarUsuarioComponent,
+    ModificarMascotaComponent
   ],
   imports: [
     CommonModule,

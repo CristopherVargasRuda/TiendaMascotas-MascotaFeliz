@@ -2,12 +2,22 @@
 <section class="col-md-5 p-md-5">
 <h2 class="text-center bg-success text-bg-dark p-2">Mis mascotas</h2>
 
+<div class="card" *ngFor="let mascota of mascotas">
+  <img src="assets/img/images-mascotas/{{mascota.foto}}"class="card-img-top" alt={{mascota.especie}} >
+  <div class="card-body">
+    <h5 class="card-title">{{mascota.nombre}}</h5>
+    <p class="card-text">{{mascota.comentario}}</p>
+    <a href="#" class="btn btn-primary"><i class="bi bi-search-heart mx-1"></i> Ver detalle</a>
+  </div>
+</div>
+
+
 
 <a class="btn btn-outline-warning" routerLink="agregar-mascota" >Agregar mascota</a>
 </section>
 <section class="col-md-5 p-md-5">
   <h2 class="text-center bg-success text-bg-dark p-2">Mis planes</h2>
-  <div>
+  <div >
 
   </div>
 
