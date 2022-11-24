@@ -1,13 +1,13 @@
 <section class="row justify-content-center p-md-5">
 
     <h1 class="bg-light text-center p-3">Registro nuevo cliente</h1>
-    <form [formGroup]="formularioUsuario" (ngSubmit)="registrarCliente()" class="col-sm-11 col-md-6 col-xxl-3">
-      
+    <form [formGroup]="formularioUsuario" (ngSubmit)="registrarUsuario()" class="col-sm-11 col-md-6 col-xxl-3">
+
 
       <div class="row mb-2">
         <label class="col-3 text-md-end" for="txtRol">Rol</label>
         <div class="col-9">
-            <select class="form-control" formControlName="nombre" name="seleccioRol" id="seleccioRol">
+            <select class="form-control" formControlName="rol" name="seleccioRol" id="seleccioRol">
                   <option value="Asesor">Asesor</option>
                   <option value="Administrador">Administrador</option>
                   <option value="Cliente">Cliente</option>
@@ -15,16 +15,16 @@
         </div>
 
       </div>
-      
+
         <div class="row">
         <label for="txtNombre" class="form-label col-md-3 text-md-end">Nombres</label>
         <div class="col-md-9">
           <input type="text" formControlName="nombre" class="form-control" id="txtNombre" required>
         </div>
- 
+
       </div>
-  
-  
+
+
       <div class="row mt-2">
         <label for="txtApellidos" class="form-label col-md-3 text-md-end">Apellidos</label>
         <div class="col-md-9">
@@ -32,34 +32,33 @@
         </div>
 
       </div>
-  
+
       <div class="row mt-2">
         <label for="txtDocumento" class="form-label col-md-3 text-md-end">Identificacion</label>
         <div class="col-md-9">
         <input type="text" id="txtDocumento" formControlName="documento"  class="form-control" required>
       </div>
     </div>
-  
+
       <h3 class="title text-center mt-3 p-1 text-info bg-light">datos de contacto</h3>
-  
-  
+
+
         <div class="input-group has-validation">
           <span class="input-group-text" id="inputGroupPrepend">Email <i class="bi bi-envelope-at-fill px-1"></i></span>
           <input type="email" formControlName="email" class="form-control" id="txtCorreo" aria-describedby="inputGroupPrepend" required>
 
         </div>
-  
-  
-  
+
+
+
       <div class="input-group has-validation mt-2">
         <span class="input-group-text" id="inputGroupPrepend">Telefono <i></i></span>
         <input type="text" formControlName="telefono" class="form-control" id="txtCelular" required>
 
       </div>
-  
+
         <div class="flex-reverse mt-2">
           <button  [disabled]="!formularioUsuario.valid"  class="btn btn-outline-warning" type="submit">Registrarse</button>
         </div>
     </form>
   </section>
-  
