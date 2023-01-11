@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 import { Md5 } from 'ts-md5';
 
 @Component({
@@ -17,7 +18,7 @@ export class LogingComponent implements OnInit {
   })
   intentos:number=0;
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -45,24 +46,19 @@ iniciarSesion(){
       localStorage['identificador']=mesaje.datos.id;
       localStorage['tk']=mesaje.tk;
       } catch {
-        alert(mesaje)
+        console.log(mesaje)
       }
-
-
     })
 
   this.intentos ++;
   localStorage.setItem('intentos',this.intentos.toString());
+
   this.fgSesion.reset();
-  if(localStorage['rol']){
-    if(localStorage['rol'].lowerCase()=='cliente'){
-      window.location.href="/cliente/";
-    }
+
+  const Rol =localStorage.getItem('rol');
+  
+  if(Rol){
+    console.log(Rol);
   }
-
   }
-
-
-
-
 }

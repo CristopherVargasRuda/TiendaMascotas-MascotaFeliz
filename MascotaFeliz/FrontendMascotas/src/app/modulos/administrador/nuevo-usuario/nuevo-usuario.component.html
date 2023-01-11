@@ -1,13 +1,13 @@
 <section class="row justify-content-center p-md-5">
 
     <h1 class="bg-light text-center p-3">Registro nuevo cliente</h1>
-    <form [formGroup]="formularioUsuario" (ngSubmit)="registrarCliente()" class="col-sm-11 col-md-6 col-xxl-3">
+    <form [formGroup]="formularioUsuario" (ngSubmit)="registrarUsuario()" class="col-sm-11 col-md-6 col-xxl-3">
       
 
       <div class="row mb-2">
         <label class="col-3 text-md-end" for="txtRol">Rol</label>
         <div class="col-9">
-            <select class="form-control" formControlName="nombre" name="seleccioRol" id="seleccioRol">
+            <select class="form-control" formControlName="rol" name="seleccioRol" id="seleccioRol">
                   <option value="Asesor">Asesor</option>
                   <option value="Administrador">Administrador</option>
                   <option value="Cliente">Cliente</option>

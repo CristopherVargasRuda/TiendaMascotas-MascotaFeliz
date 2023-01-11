@@ -13,6 +13,7 @@ export class NuevoUsuarioComponent implements OnInit {
     'documento':['',[Validators.required]],
     'email':['',[Validators.required,Validators.email]],
     'telefono':['',[Validators.required,Validators.maxLength(11),Validators.minLength(10)]],
+    'rol':['Asesor',[Validators.required]]
            
   })
 
@@ -21,7 +22,7 @@ export class NuevoUsuarioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  registrarCliente(){
+  registrarUsuario(){
     
     const nombre = this.formularioUsuario.controls['nombre'].value;
     const apellido = this.formularioUsuario.controls['apellido'].value;
